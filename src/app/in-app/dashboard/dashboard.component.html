@@ -1,0 +1,106 @@
+<div class="group_4 row">
+  <div class="group column">
+    <div class="group_3 column">
+      <div class="group_1 column">
+        <h4 class="h4">Hi, Sarah!</h4>
+        <p class="igx-typography__subtitle-1 text">We have some great suggestions for your next travel! We've searched the whole web to provide you with these rare findings - special for you!</p>
+      </div>
+    </div>
+    <div class="group_6 column">
+      <div class="group_13 row">
+        <h6 class="h6">Latest in articles</h6>
+        <button igxButton="outlined" igxRipple routerLink="/in-app/articles" class="button">view all ARTICLES</button>
+      </div>
+      <div class="group_14 group_16 row">
+        <igx-card type="outlined" *ngFor="let item of travelAppSelectedArticles" class="card">
+          <igx-card-media height="120px">
+            <img [src]="item.image_url" />
+          </igx-card-media>
+          <igx-card-header>
+            <h3 igxCardHeaderTitle>{{ item.title }}</h3>
+            <h5 igxCardHeaderSubtitle>{{ item.subtitle }}</h5>
+          </igx-card-header>
+          <igx-card-actions [reverse]="true" class="actions-content">
+            <button igxButton="icon" igxRipple>
+              <igx-icon>bookmark_border</igx-icon>
+            </button>
+            <button igxButton="icon" igxRipple>
+              <igx-icon>share</igx-icon>
+            </button>
+            <button igxButton="outlined" igxRipple class="button_1">read</button>
+          </igx-card-actions>
+        </igx-card>
+        <div class="group_10 column">
+          <button igxButton="outlined" igxRipple routerLink="/in-app/articles" class="button_1">VIEW ALL</button>
+        </div>
+      </div>
+    </div>
+    <div class="group_7 column">
+      <div class="group_13 group_16 row">
+        <h6 class="h6">Destinations</h6>
+        <button igxButton="outlined" igxRipple class="button">VIEW ALL DESTINATIONS</button>
+      </div>
+      <div class="group_14 group_16 row">
+        <igx-card type="outlined" *ngFor="let item of travelAppDestinations" class="card">
+          <igx-card-media height="120px">
+            <img [src]="item.image_url" />
+          </igx-card-media>
+          <igx-card-header>
+            <h3 igxCardHeaderTitle>{{ item.title }}</h3>
+            <h5 igxCardHeaderSubtitle> </h5>
+          </igx-card-header>
+          <igx-card-actions [reverse]="true" class="actions-content">
+            <button igxButton="icon" igxRipple>
+              <igx-icon>bookmark_border</igx-icon>
+            </button>
+            <button igxButton="icon" igxRipple>
+              <igx-icon>share</igx-icon>
+            </button>
+            <button igxButton="outlined" igxRipple class="button_1">view</button>
+          </igx-card-actions>
+        </igx-card>
+        <div class="group_10 column">
+          <button igxButton="outlined" igxRipple class="button_1">discover more</button>
+        </div>
+      </div>
+    </div>
+    <div class="group_11 column">
+      <div class="group_13 group_16 row">
+        <h6 class="h6">My travel lists</h6>
+        <button igxButton="outlined" igxRipple class="button">VIEW ALL LISTS</button>
+      </div>
+      <div class="group_14 row">
+        <igx-grid [data]="northwindProducts" [autoGenerate]="false" displayDensity="cosy" width="100%" height="200px" class="grid">
+          <igx-column header="productID" field="productID" dataType="number" [sortable]="true" [filterable]="true" [searchable]="true" [selectable]="true" title="productID" [disablePinning]="false" [disableHiding]="false"></igx-column>
+          <igx-column header="supplierID" field="supplierID" dataType="number" [sortable]="true" [filterable]="true" [searchable]="true" [selectable]="true" title="supplierID" [disablePinning]="false" [disableHiding]="false"></igx-column>
+          <igx-column header="categoryID" field="categoryID" dataType="number" [sortable]="true" [filterable]="true" [searchable]="true" [selectable]="true" title="categoryID" [disablePinning]="false" [disableHiding]="false"></igx-column>
+          <igx-column header="quantityPerUnit" field="quantityPerUnit" dataType="string" [sortable]="true" [filterable]="true" [searchable]="true" [selectable]="true" title="quantityPerUnit" [disablePinning]="false" [disableHiding]="false"></igx-column>
+          <igx-column header="unitPrice" field="unitPrice" dataType="number" [sortable]="true" [filterable]="true" [searchable]="true" [selectable]="true" title="unitPrice" [disablePinning]="false" [disableHiding]="false"></igx-column>
+          <igx-column header="unitsInStock" field="unitsInStock" dataType="number" [sortable]="true" [filterable]="true" [searchable]="true" [selectable]="true" title="unitsInStock" [disablePinning]="false" [disableHiding]="false"></igx-column>
+          <igx-column header="unitsOnOrder" field="unitsOnOrder" dataType="number" [sortable]="true" [filterable]="true" [searchable]="true" [selectable]="true" title="unitsOnOrder" [disablePinning]="false" [disableHiding]="false"></igx-column>
+          <igx-column header="reorderLevel" field="reorderLevel" dataType="number" [sortable]="true" [filterable]="true" [searchable]="true" [selectable]="true" title="reorderLevel" [disablePinning]="false" [disableHiding]="false"></igx-column>
+          <igx-column header="discontinued" field="discontinued" dataType="boolean" [sortable]="true" [filterable]="true" [searchable]="true" [selectable]="true" title="discontinued" [disablePinning]="false" [disableHiding]="false"></igx-column>
+          <igx-column header="name" field="name" dataType="string" [sortable]="true" [filterable]="true" [searchable]="true" [selectable]="true" title="name" [disablePinning]="false" [disableHiding]="false"></igx-column>
+        </igx-grid>
+      </div>
+    </div>
+  </div>
+  <div class="group_2 column">
+    <div class="group_9 row">
+      <h6 class="h6">Photos</h6>
+      <button igxButton="outlined" igxRipple class="button">GO TO ALBUM</button>
+    </div>
+    <div class="group_5 column">
+      <div class="group_15 column">
+        <div class="group_12 row">
+          <div class="group_8 column">
+            <img [src]="item.image_url" *ngFor="let item of travelAppImageSet1" class="image" />
+          </div>
+          <div class="group_8 column">
+            <img [src]="item.image_url" *ngFor="let item of travelAppImageSet2" class="image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

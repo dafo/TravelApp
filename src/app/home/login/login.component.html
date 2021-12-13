@@ -1,0 +1,27 @@
+<div class="left column">
+  <div class="form column">
+    <div class="group_1 column">
+      <div class="group_2 group_3 column">
+        <h3 class="h3">Login</h3>
+        <p class="igx-typography__body-2 text">Please, login so you can access all applications features.</p>
+      </div>
+      <igx-input-group type="border" class="input">
+        <input type="text" placeholder="myname@website.com" igxInput />
+        <label igxLabel>Email</label>
+      </igx-input-group>
+      <igx-input-group type="border" class="input">
+        <input type="text" placeholder="Min 8 characters" igxInput />
+        <label igxLabel>Password</label>
+      </igx-input-group>
+      <div class="group row">
+        <igx-checkbox labelPosition="after" [checked]="true" [indeterminate]="false" class="checkbox">Remember me</igx-checkbox>
+        <a target="_self" routerLink="/home/reset-password" class="igx-typography__body-2 hyperlink">Forgot password?</a>
+      </div>
+      <button igxButton="raised" igxRipple routerLink="/in-app/dashboard" class="button_1">log in</button>
+    </div>
+    <div class="group_2 group_4 column">
+      <button igxButton="outlined" igxRipple routerLink="/home/sign-up" class="button">Don't have a registration? Sign up now!</button>
+    </div>
+  </div>
+</div>
+<div class="right column"></div>

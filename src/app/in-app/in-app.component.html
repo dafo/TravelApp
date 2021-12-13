@@ -1,0 +1,45 @@
+<div class="group row">
+  <div class="group_2 row">
+    <button igxButton="icon" igxRipple [igxToggleAction]="navDrawer" class="button">
+      <igx-icon>menu</igx-icon>
+    </button>
+    <img src="https://i.ibb.co/syrwz7h/travel-app.png" routerLink="/home/login" class="image" />
+  </div>
+  <div class="group_1 row">
+    <button igxButton="icon" igxRipple class="button_1">
+      <igx-icon>notifications</igx-icon>
+    </button>
+    <igx-avatar src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&crop=faces&w=240&h=240&q=80" [roundShape]="true" size="small"></igx-avatar>
+  </div>
+</div>
+<igx-nav-drawer [isOpen]="false" width="320px" [pin]="false" [pinThreshold]="0" #navDrawer class="nav-drawer">
+  <ng-template igxDrawer>
+    <span [isHeader]="false" [active]="false" igxDrawerItem routerLink="/in-app/dashboard" class="nav-drawer-item">
+      <igx-icon family="material" class="icon">dashboard</igx-icon>
+      <span class="span">Dashboard</span>
+    </span>
+    <span [isHeader]="false" [active]="false" igxDrawerItem class="nav-drawer-item">
+      <igx-icon family="material" class="icon">image_search</igx-icon>
+      <span class="span">Discover</span>
+    </span>
+    <span [isHeader]="false" [active]="false" igxDrawerItem class="nav-drawer-item">
+      <igx-icon family="material" class="icon">playlist_add_check</igx-icon>
+      <span class="span">Travel lists</span>
+    </span>
+    <span [isHeader]="false" [active]="false" igxDrawerItem routerLink="/in-app/articles" class="nav-drawer-item">
+      <igx-icon family="material" class="icon">chrome_reader_mode</igx-icon>
+      <span class="span">Articles</span>
+    </span>
+    <span [isHeader]="false" [active]="false" igxDrawerItem class="nav-drawer-item">
+      <igx-icon family="material" class="icon">question_answer</igx-icon>
+      <span class="span">FAQ</span>
+    </span>
+    <span [isHeader]="false" [active]="false" igxDrawerItem class="nav-drawer-item">
+      <igx-icon family="material" class="icon">settings</igx-icon>
+      <span class="span">Settings</span>
+    </span>
+  </ng-template>
+</igx-nav-drawer>
+<div class="view-container">
+  <router-outlet></router-outlet>
+</div>
